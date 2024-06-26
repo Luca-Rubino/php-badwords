@@ -24,6 +24,7 @@
         </h1>
     </section>
     <section>
+        <h3>Questo paragrafo è lungo: <?php echo strlen($testo) ?> caratteri.</h3>
         <p><?php echo $testo ?></p>
     </section>
 </header>
