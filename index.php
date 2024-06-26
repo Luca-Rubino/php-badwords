@@ -6,6 +6,8 @@
     Est facere id mollitia placeat nemo numquam officiis! Ipsum explicabo ipsa iste blanditiis exercitationem sed, obcaecati, voluptatem labore dignissimos debitis veritatis! Possimus dolore enim laudantium quae repudiandae explicabo quibusdam sit?
     Facere at nostrum reiciendis, aliquid ducimus blanditiis excepturi aliquam beatae odit minima exercitationem ipsum itaque esse sed! Consequuntur dolor deserunt iusto perspiciatis fuga dolore vitae eveniet aspernatur! Vitae, eius ut.
     Aliquid amet veritatis voluptates dignissimos, nam delectus, cupiditate perferendis et non possimus iusto repellat nihil blanditiis sint ut, quasi id nemo. Molestias sed provident temporibus impedit eveniet eligendi explicabo quisquam.';
+    $filtroCensura = $_GET["filtroCensura"];
+    $nuovoTesto = str_replace($filtroCensura, "***", $testo);
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>php-badwords</title>
 </head>
@@ -30,10 +33,14 @@
     </section>
     <section>
         <form action="./index.php" method="get">
-            <label for="filtro-censura">Cosa vuoi censurare?</label>
-            <input type="text" name="filtro-censura">
+            <label for="filtroCensura">Cosa vuoi censurare?</label>
+            <input type="text" name="filtroCensura" id="filtroCensura">
             <input type="submit" value="Invia">
         </form>
+    </section>
+    <section>
+        <h2>Testo censurato</h2>
+        <p> <?php echo $nuovoTesto ?> </p>
     </section>
 </header>
 
