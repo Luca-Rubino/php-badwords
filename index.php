@@ -1,4 +1,3 @@
-
 <?php  
     $titolo = 'Php-Badwords';
     $testo = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit architecto repellendus fuga ducimus perspiciatis tempore alias sequi placeat cumque, ratione ea aliquid harum. Maiores architecto repellat delectus excepturi, error natus.
@@ -6,7 +5,7 @@
     Est facere id mollitia placeat nemo numquam officiis! Ipsum explicabo ipsa iste blanditiis exercitationem sed, obcaecati, voluptatem labore dignissimos debitis veritatis! Possimus dolore enim laudantium quae repudiandae explicabo quibusdam sit?
     Facere at nostrum reiciendis, aliquid ducimus blanditiis excepturi aliquam beatae odit minima exercitationem ipsum itaque esse sed! Consequuntur dolor deserunt iusto perspiciatis fuga dolore vitae eveniet aspernatur! Vitae, eius ut.
     Aliquid amet veritatis voluptates dignissimos, nam delectus, cupiditate perferendis et non possimus iusto repellat nihil blanditiis sint ut, quasi id nemo. Molestias sed provident temporibus impedit eveniet eligendi explicabo quisquam.';
-    $filtroCensura = $_GET["filtro-censura"];
+    $filtroCensura = isset($_GET["filtro-censura"]) ? $_GET["filtro-censura"] : "";
     $nuovoTesto = str_replace($filtroCensura, "***", $testo);
 ?>
 
