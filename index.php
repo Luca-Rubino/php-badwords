@@ -13,6 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>php-badwords</title>
 </head>
 <body>
@@ -24,8 +25,15 @@
         </h1>
     </section>
     <section>
-        <h3>Questo paragrafo è lungo: <?php echo strlen($testo) ?> caratteri.</h3>
+        <h3>Questo paragrafo è lungo: <span><?php echo strlen($testo) ?></span> caratteri.</h3>
         <p><?php echo $testo ?></p>
+    </section>
+    <section>
+        <form action="./index.php" method="get">
+            <label for="filtro-censura">Cosa vuoi censurare?</label>
+            <input type="text" name="filtro-censura">
+            <input type="submit" value="Invia">
+        </form>
     </section>
 </header>
 
